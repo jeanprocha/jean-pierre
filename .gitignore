@@ -1,0 +1,7 @@
+.vercel
+.DS_Store
+
+# foto original (450 KB) — a versão publicada é assets/perfil.webp
+perfil.png
+node_modules
+*.log

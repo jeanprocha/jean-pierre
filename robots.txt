@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://jean-pierre.vercel.app/sitemap.xml

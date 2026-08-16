@@ -1,0 +1,717 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Jean Pierre — Desenvolvedor Full Stack Sênior | IA Aplicada e Automação</title>
+<meta name="description" content="Desenvolvedor Full Stack Sênior com 6+ anos, especializado em IA aplicada, automação e integração de sistemas. Construo assistentes de IA, integrações em produção e microsserviços — com o custo da IA medido por execução.">
+<meta name="author" content="Jean Pierre">
+<meta name="color-scheme" content="dark light">
+<link rel="canonical" href="https://jean-pierre.vercel.app/">
+
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://jean-pierre.vercel.app/">
+<meta property="og:site_name" content="Jean Pierre">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:title" content="Jean Pierre — Desenvolvedor Full Stack Sênior | IA Aplicada e Automação">
+<meta property="og:description" content="Desenvolvedor Full Stack Sênior com 6+ anos, especializado em IA aplicada, automação e integração de sistemas. Construo assistentes de IA, integrações em produção e microsserviços — com o custo da IA medido por execução.">
+<meta property="og:image" content="https://jean-pierre.vercel.app/assets/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Jean Pierre — automação e integração de sistemas">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Jean Pierre — Desenvolvedor Full Stack Sênior | IA Aplicada e Automação">
+<meta name="twitter:description" content="Desenvolvedor Full Stack Sênior com 6+ anos, especializado em IA aplicada, automação e integração de sistemas. Construo assistentes de IA, integrações em produção e microsserviços — com o custo da IA medido por execução.">
+<meta name="twitter:image" content="https://jean-pierre.vercel.app/assets/og.png">
+
+<meta name="theme-color" content="#0A0D12" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#E9ECF1" media="(prefers-color-scheme: light)">
+
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+<link rel="preload" as="image" href="assets/perfil.webp" fetchpriority="high">
+<link rel="stylesheet" href="styles.css?v=17">
+
+<script>
+  /* aplica as preferências salvas antes da pintura, para não piscar */
+  (function () {
+    var html = document.documentElement;
+    function get(k) { try { return localStorage.getItem(k); } catch (e) { return null; } }
+
+    var tema = get("tema");
+    if (tema) html.setAttribute("data-theme", tema);
+
+    /* atributos simples */
+    [["cantos","data-cantos"], ["borda-grossura","data-bw"], ["borda-estilo","data-bs"],
+     ["fundo","data-bg"], ["fundo-anim","data-bg-var"], ["nav-modo","data-nav"],
+     ["menu-icones","data-nav-icons"], ["contato-estilo","data-contact"],
+     ["anim-direcao","data-anim"], ["movimento","data-motion"]
+    ].forEach(function (p) {
+      var v = get(p[0]);
+      if (v) html.setAttribute(p[1], v);
+    });
+
+    function rgb(hex) {
+      var n = parseInt(hex.slice(1), 16);
+      return [(n >> 16) & 255, (n >> 8) & 255, n & 255];
+    }
+
+    var destaque = get("destaque");
+    if (destaque && destaque.indexOf("custom:") === 0) {
+      var a = rgb(destaque.slice(7));
+      html.style.setProperty("--accent", a.join(" "));
+      html.style.setProperty("--accent-deep", a.map(function (c) { return Math.round(c * .55); }).join(" "));
+    } else if (destaque) {
+      html.setAttribute("data-accent", destaque);
+    }
+
+    html.classList.add("js");
+  })();
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Jean Pierre",
+  "jobTitle": "Desenvolvedor Full Stack Sênior",
+  "description": "Desenvolvedor Full Stack Sênior com 6+ anos, especializado em IA aplicada, automação e integração de sistemas. Construo assistentes de IA, integrações em produção e microsserviços — com o custo da IA medido por execução.",
+  "url": "https://jean-pierre.vercel.app/",
+  "image": "https://jean-pierre.vercel.app/assets/perfil.webp",
+  "email": "mailto:jeanprocha89@gmail.com",
+  "telephone": "+5541988418954",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Curitiba",
+    "addressRegion": "PR",
+    "addressCountry": "BR"
+  },
+  "alumniOf": { "@type": "CollegeOrUniversity", "name": "UniBrasil" },
+  "sameAs": [
+    "https://www.linkedin.com/in/jeanprocha/",
+    "https://github.com/jeanprocha"
+  ],
+  "knowsAbout": [
+    "Inteligência artificial aplicada", "Integração de sistemas", "Automação de processos",
+    "Microsserviços", "Go", "React", "Next.js", "TypeScript", "Node.js",
+    "RAG", "Model Context Protocol", "PostgreSQL", "Docker"
+  ]
+}
+</script>
+</head>
+<body>
+
+<a class="skip" href="#topo">Pular para o conteúdo</a>
+
+<div class="bg-layer" aria-hidden="true"><canvas id="bg-canvas"></canvas></div>
+
+<div class="page" id="page">
+
+<header class="topbar">
+  <div class="wrap topbar__in">
+    <a class="mark" href="#topo">
+      <span class="mark__mono" aria-hidden="true">JP</span>
+      <span class="mark__name">Jean Pierre</span>
+      <span class="mark__role" data-i18n="role">Full Stack Sênior</span>
+    </a>
+
+    <button class="burger" type="button" id="nav-toggle" aria-label="Abrir menu" aria-expanded="false">
+      <span></span>
+    </button>
+
+    <nav class="nav" aria-label="Seções" id="site-nav">
+      <a href="#stack" data-nav-for="stack">
+        <svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 3 8l9 5 9-5-9-5Z"></path><path d="M3 13l9 5 9-5"></path></svg>
+        <span data-i18n="navStack">Stack</span>
+      </a>
+      <a href="#projetos" data-nav-for="projetos">
+        <svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="7" width="18" height="13" rx="2"></rect><path d="M9 7V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2"></path></svg>
+        <span data-i18n="navProjetos">Projetos</span>
+      </a>
+      <a href="#contato" data-nav-for="contato">
+        <svg class="nav-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="m3 7 9 6 9-6"></path></svg>
+        <span data-i18n="navContato">Contato</span>
+      </a>
+    </nav>
+
+    <button class="rail-toggle" type="button" id="rail-toggle" aria-expanded="true" aria-label="Recolher menu">
+      <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" aria-hidden="true">
+        <path d="M4 7h16M4 12h16M4 17h16"></path>
+      </svg>
+    </button>
+
+    <div class="topbar__tools">
+      <button class="kbd-hint" type="button" id="palette-open" aria-label="Abrir paleta de comandos">
+        <kbd>Ctrl</kbd><kbd>K</kbd>
+      </button>
+      <button class="edit-btn" type="button" id="editor-open" aria-expanded="false">
+        <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M12 20h9"></path>
+          <path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z"></path>
+        </svg>
+        <span class="edit-btn__txt" data-i18n="editar">Editar interface</span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="topo">
+
+  <!-- APRESENTAÇÃO -->
+  <section class="wrap hero">
+    <div class="hero__copy">
+      <span class="label" data-i18n="heroEyebrow">Full stack · IA aplicada, automação &amp; integração</span>
+      <h1>
+        <span class="line"><span>Sou o Jean Pierre,</span></span>
+        <span class="line"><span>faço seus sistemas <em>conversarem</em>.</span></span>
+      </h1>
+      <p class="hero__sub" data-i18n-html="heroP1">
+        Sou Desenvolvedor Full Stack com mais de 6 anos de experiência, especializado em
+        automação e integração de sistemas. Atuo no desenvolvimento de soluções end-to-end,
+        conectando ERPs, APIs e plataformas para transformar processos manuais em operações
+        automatizadas, monitoradas e confiáveis.
+      </p>
+      <p class="hero__sub" data-i18n-html="heroP2">
+        Minha experiência inclui a construção de microsserviços, integrações em produção e
+        sistemas de alto volume, atuando desde a arquitetura e modelagem de dados até o
+        desenvolvimento, deploy e sustentação.
+      </p>
+      <p class="hero__sub" data-i18n-html="heroP3">
+        Sou Bacharel em Sistemas de Informação pela <a class="org" href="https://www.unibrasil.com.br/" target="_blank" rel="noopener noreferrer">UniBrasil</a>
+        e, ao longo da minha trajetória, trabalhei em diferentes contextos e projetos,
+        passando por projetos de blockchain (<a class="org" href="https://br.linkedin.com/company/intergalaxy" target="_blank" rel="noopener noreferrer">Intergalaxy</a> /
+        <a class="org" href="https://www.linkedin.com/company/insightsolutionbr/" target="_blank" rel="noopener noreferrer">Insight</a>)
+        e produtos digitais para empresas como <a class="org" href="https://www.drogasil.com.br/" target="_blank" rel="noopener noreferrer">Drogasil</a>,
+        <a class="org" href="https://www.drogaraia.com.br/" target="_blank" rel="noopener noreferrer">Droga Raia</a> e
+        <a class="org" href="https://www.zonasul.com.br/" target="_blank" rel="noopener noreferrer">Zona Sul</a>,
+        além de projetos desenvolvidos por meio de consultorias como
+        <a class="org" href="https://harpiaconsultoria.com/" target="_blank" rel="noopener noreferrer">Harpia</a>,
+        <a class="org" href="https://www.cws-platform.com/" target="_blank" rel="noopener noreferrer">CWS</a>,
+        <a class="org" href="https://systemwiser.com/" target="_blank" rel="noopener noreferrer">SystemWiser</a> e
+        <a class="org" href="https://groundwork.com.br/" target="_blank" rel="noopener noreferrer">Groundwork</a>.
+      </p>
+      <div class="cta-row">
+        <a class="btn btn--primary" href="#contato"><span data-i18n="ctaContato">Entre em contato</span> <span class="arrow" aria-hidden="true">→</span></a>
+        <a class="btn btn--ghost cv-btn"
+           href="assets/Jean-Pierre-Rocha-CV.pdf" download
+           target="_blank" rel="noopener noreferrer">
+          <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M12 3v12"></path><path d="M7 11l5 5 5-5"></path><path d="M4 20h16"></path>
+          </svg>
+          <span data-i18n="cvBtn">Baixar currículo em PDF</span>
+          <span class="arrow" aria-hidden="true">→</span>
+        </a>
+        <a class="btn btn--ghost" href="#projetos" data-i18n="ctaProjetos">Ver projetos</a>
+      </div>
+    </div>
+
+    <aside class="panel profile">
+      <div class="panel__bar">
+        <span class="label" data-i18n="pPerfil">perfil</span>
+        <span class="spacer"></span>
+        <a class="tick" href="https://github.com/jeanprocha" target="_blank" rel="noopener noreferrer">@jeanprocha</a>
+      </div>
+      <img class="profile__img" src="assets/perfil.webp" width="660" height="660"
+           alt="Jean Pierre, desenvolvedor full stack" fetchpriority="high" decoding="async">
+      <dl class="profile__meta">
+        <div>
+          <dt data-i18n="pStatus">status</dt>
+          <dd class="avail"><span class="avail__dot" aria-hidden="true"></span><span data-i18n="pStatusV">aberto a vagas e projetos</span></dd>
+        </div>
+        <div><dt data-i18n="pLocal">local</dt><dd>Curitiba · PR</dd></div>
+        <div><dt data-i18n="pFoco">foco</dt><dd data-i18n="pFocoV">IA aplicada · Go · React</dd></div>
+        <div><dt data-i18n="pExp">experiência</dt><dd data-i18n="pExpV">6+ anos</dd></div>
+        <div><dt data-i18n="pGrad">graduação</dt><dd data-i18n="pGradV">Sistemas de Informação</dd></div>
+      </dl>
+    </aside>
+  </section>
+
+  <!-- STACK -->
+  <section class="section" id="stack" data-section="stack">
+    <div class="wrap">
+      <div class="section__head" data-reveal>
+        <h2 data-i18n="secStack">Stack</h2>
+        <span class="rule"></span>
+        <span class="label" data-i18n="secStackSub">o que uso em produção</span>
+      </div>
+
+      <div class="stack-top" data-reveal>
+        <span class="label stack-top__label" data-i18n="stTop">uso todos os dias</span>
+        <div class="chips">
+          <span class="chip">TypeScript</span>
+          <span class="chip">Node.js</span>
+          <span class="chip">React</span>
+          <span class="chip">PostgreSQL</span>
+          <span class="chip">Docker</span>
+        </div>
+      </div>
+
+      <div class="rows" data-reveal style="--d:1">
+        <div class="row">
+          <span class="label" data-i18n="stLing">Linguagens</span>
+          <div class="row__items"><span>TypeScript</span><span>JavaScript</span><span>Python</span><span>PHP</span><span>SQL</span></div>
+        </div>
+        <div class="row">
+          <span class="label" data-i18n="stFront">Front-end</span>
+          <div class="row__items"><span>React</span><span>Next.js</span><span>Vue</span><span>Tailwind</span><span>Vite</span></div>
+        </div>
+        <div class="row">
+          <span class="label" data-i18n="stBack">Back-end</span>
+          <div class="row__items"><span>Node</span><span>NestJS</span><span>FastAPI</span><span>Laravel</span><span>REST · GraphQL</span></div>
+        </div>
+        <div class="row">
+          <span class="label" data-i18n="stDados">Dados</span>
+          <div class="row__items"><span>PostgreSQL</span><span>MySQL</span><span>Redis</span><span>MongoDB</span><span>ETL</span></div>
+        </div>
+        <div class="row">
+          <span class="label" data-i18n="stMsg">Mensageria</span>
+          <div class="row__items"><span>RabbitMQ</span><span>BullMQ</span><span>Kafka</span><span>webhooks</span><span>cron/agendadores</span></div>
+        </div>
+        <div class="row">
+          <span class="label" data-i18n="stInfra">Infra</span>
+          <div class="row__items"><span>Docker</span><span>GitHub Actions</span><span>AWS</span><span>Nginx</span><span>Terraform</span></div>
+        </div>
+        <div class="row">
+          <span class="label" data-i18n="stObs">Observabilidade</span>
+          <div class="row__items"><span>Sentry</span><span>Grafana</span><span>OpenTelemetry</span><span>logs estruturados</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJETOS -->
+  <section class="section" id="projetos" data-section="projetos">
+    <div class="wrap">
+      <div class="section__head" data-reveal>
+        <h2 data-i18n="secProjetos">Projetos</h2>
+        <span class="rule"></span>
+        <span class="label" data-i18n="secProjetosSub">no ar · código aberto</span>
+      </div>
+
+      <div class="cases cases--duo">
+        <article class="case" data-reveal>
+          <span class="proj-status">
+            <i class="proj-status__dot" aria-hidden="true"></i>
+            <span data-i18n="noAr">no ar</span>
+            <span class="proj-cat" data-i18n="cat1">· IA &amp; automação</span>
+          </span>
+          <h3 data-i18n="p1Tit">Workflow AI Platform</h3>
+          <p class="proj-hook" data-i18n="p1Hook">Automação com IA — do fluxo visual ao custo por execução</p>
+          <p data-i18n="p1P">
+            Plataforma AI-first para criar automações com agentes, RAG e MCP: editor visual
+            de workflows, execução orientada a eventos, multi-tenant e aprovação humana com
+            pausa durável — um fluxo para no meio, espera dias por uma decisão e retoma de
+            onde parou. Mede <strong>tokens e custo em dólar por execução</strong> e sugere
+            trocar de modelo quando isso não compromete a tarefa.
+          </p>
+          <div class="proj-tags" data-i18n-html="p1Tags"><span>IA</span><span>RAG</span><span>MCP</span><span>NestJS</span><span>Next.js</span><span>PostgreSQL</span></div>
+          <div class="proj-links">
+            <a class="proj-link proj-link--primary" href="https://jeanpierre-automacao.vercel.app" target="_blank" rel="noopener noreferrer">
+              <span data-i18n="verDemo">Ver funcionando</span> <span class="arrow" aria-hidden="true">→</span>
+            </a>
+            <a class="proj-link" href="https://github.com/jeanprocha/ai-workflow" target="_blank" rel="noopener noreferrer">
+              <span data-i18n="verCodigo">Código</span> <span class="arrow" aria-hidden="true">→</span>
+            </a>
+          </div>
+        </article>
+
+        <article class="case" data-reveal style="--d:1">
+          <span class="proj-status">
+            <i class="proj-status__dot" aria-hidden="true"></i>
+            <span data-i18n="noAr">no ar</span>
+            <span class="proj-cat" data-i18n="cat2">· atendimento &amp; WhatsApp</span>
+          </span>
+          <h3 data-i18n="p2Tit">Atendimento no WhatsApp Web</h3>
+          <p class="proj-hook" data-i18n="p2Hook">Um balcão de atendimento dentro do WhatsApp — sem servidor</p>
+          <p data-i18n="p2P">
+            Extensão de Chrome que transforma o WhatsApp Web em canal de atendimento:
+            respostas rápidas, etiquetas de conversa, editor visual de fluxos com simulador
+            e um painel de métricas — funil por fluxo, horário de pico e tempo até a primeira
+            resposta. Integra com APIs externas e roda <strong>inteiramente no navegador</strong>:
+            nenhum dado sai da máquina. <strong>495 testes automatizados</strong>.
+          </p>
+          <div class="proj-tags" data-i18n-html="p2Tags"><span>Extensão</span><span>Manifest V3</span><span>Vue 3</span><span>Automação</span><span>TypeScript</span></div>
+          <div class="proj-links">
+            <a class="proj-link proj-link--primary" href="https://github.com/jeanprocha/whatsapp-atendimento/releases" target="_blank" rel="noopener noreferrer">
+              <span data-i18n="instalar">Instalar</span> <span class="arrow" aria-hidden="true">→</span>
+            </a>
+            <a class="proj-link" href="https://github.com/jeanprocha/whatsapp-atendimento" target="_blank" rel="noopener noreferrer">
+              <span data-i18n="verCodigo">Código</span> <span class="arrow" aria-hidden="true">→</span>
+            </a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTATO -->
+  <section class="section" id="contato" data-section="contato">
+    <div class="wrap">
+      <div class="panel contact" data-reveal>
+        <div>
+          <h2 data-i18n="secContato">Entre em contato</h2>
+          <p data-i18n-html="contatoP">
+            <strong>Busco uma posição sênior</strong> — CLT ou PJ, remoto — e também
+            atendo projetos de automação e integração. Se você tem uma vaga, uma indicação
+            ou um processo manual que deveria ser automático, me chama.
+          </p>
+        </div>
+        <div class="channels">
+          <button class="channel channel--action copy" type="button"
+                  data-copy="jeanprocha89@gmail.com" aria-label="Copiar e-mail">
+            <span class="k">e-mail</span>
+            <span class="v">jeanprocha89@gmail.com</span>
+            <span class="ico">
+              <svg class="copy__i" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="9" y="9" width="11" height="11" rx="2"></rect>
+                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+              </svg>
+              <svg class="copy__ok" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M20 6 9 17l-5-5"></path>
+              </svg>
+            </span>
+          </button>
+
+          <a class="channel" href="https://wa.me/5541988418954?text=Ol%C3%A1%20Jean%2C%20vim%20pelo%20seu%20site." target="_blank" rel="noopener noreferrer">
+            <span class="k">whatsapp</span>
+            <span class="v">+55 (41) 98841-8954</span>
+            <span class="ico">
+              <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M14 4h6v6"></path><path d="M20 4 11 13"></path>
+                <path d="M18 14v4a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4"></path>
+              </svg>
+            </span>
+          </a>
+
+          <a class="channel" href="https://www.linkedin.com/in/jeanprocha/" target="_blank" rel="noopener noreferrer">
+            <span class="k">linkedin</span>
+            <span class="v">/in/jeanprocha</span>
+            <span class="ico">
+              <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M14 4h6v6"></path><path d="M20 4 11 13"></path>
+                <path d="M18 14v4a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4"></path>
+              </svg>
+            </span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+
+</div><!-- /.page -->
+
+<!-- Contato flutuante (aparece quando o estilo "flutuante" está ativo) -->
+<button class="fab" type="button" id="fab-toggle" aria-label="Abrir contato" aria-expanded="false">
+  <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+  </svg>
+</button>
+<div class="panel fab-pop" id="fab-pop">
+  <div class="panel__bar">
+    <span class="label" data-i18n="contatoRapido">contato rápido</span>
+  </div>
+  <div class="channels">
+    <button class="channel channel--action copy" type="button"
+            data-copy="jeanprocha89@gmail.com" aria-label="Copiar e-mail">
+      <span class="k">e-mail</span>
+      <span class="v">jeanprocha89@gmail.com</span>
+      <span class="ico">
+        <svg class="copy__i" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <rect x="9" y="9" width="11" height="11" rx="2"></rect>
+          <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+        </svg>
+        <svg class="copy__ok" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M20 6 9 17l-5-5"></path>
+        </svg>
+      </span>
+    </button>
+    <a class="channel" href="https://wa.me/5541988418954?text=Ol%C3%A1%20Jean%2C%20vim%20pelo%20seu%20site." target="_blank" rel="noopener noreferrer">
+      <span class="k">whatsapp</span><span class="v">+55 (41) 98841-8954</span>
+    </a>
+    <a class="channel" href="https://www.linkedin.com/in/jeanprocha/" target="_blank" rel="noopener noreferrer">
+      <span class="k">linkedin</span><span class="v">/in/jeanprocha</span>
+    </a>
+  </div>
+</div>
+
+<!-- Paleta de comandos (Ctrl+K) -->
+<div class="palette" id="palette" role="dialog" aria-modal="true" aria-label="Paleta de comandos" hidden>
+  <div class="palette__box">
+    <input type="text" id="palette-input" placeholder="Digite um comando…" data-i18n-ph="palPlaceholder"
+           autocomplete="off" spellcheck="false" aria-label="Filtrar comandos">
+    <ul id="palette-list">
+      <li><button type="button" data-cmd="goto" data-arg="stack">Ir para Stack<span class="k">seção</span></button></li>
+      <li><button type="button" data-cmd="goto" data-arg="projetos">Ir para Projetos<span class="k">seção</span></button></li>
+      <li><button type="button" data-cmd="goto" data-arg="contato">Ir para Contato<span class="k">seção</span></button></li>
+      <li><button type="button" data-cmd="editor">Abrir editor de interface<span class="k">ctrl e</span></button></li>
+      <li><button type="button" data-cmd="theme">Alternar tema claro/escuro<span class="k">aparência</span></button></li>
+      <li><button type="button" data-cmd="accent">Trocar cor de destaque<span class="k">aparência</span></button></li>
+      <li><button type="button" data-cmd="copy-email">Copiar e-mail<span class="k">contato</span></button></li>
+      <li><button type="button" data-cmd="open" data-arg="https://wa.me/5541988418954?text=Ol%C3%A1%20Jean%2C%20vim%20pelo%20seu%20site.">Abrir WhatsApp<span class="k">contato</span></button></li>
+      <li><button type="button" data-cmd="open" data-arg="https://www.linkedin.com/in/jeanprocha/">Abrir LinkedIn<span class="k">contato</span></button></li>
+    </ul>
+    <div class="palette__empty" hidden data-i18n="palVazio">Nenhum comando encontrado.</div>
+  </div>
+</div>
+
+<!-- Editor de interface: dock que empurra o conteúdo (overlay com véu no mobile) -->
+<button class="editor-scrim" id="editor-scrim" type="button" aria-label="Fechar editor" tabindex="-1"></button>
+
+<div class="editor" id="editor" role="dialog" aria-label="Editor de interface">
+ <div class="editor__inner">
+
+  <div class="editor__head">
+    <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <path d="M12 20h9"></path>
+      <path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z"></path>
+    </svg>
+    <span class="label" data-i18n="editarTit">editar interface</span>
+    <span class="spacer"></span>
+    <button class="editor__close" type="button" id="editor-close" aria-label="Fechar editor">✕</button>
+  </div>
+
+  <div class="editor__body">
+
+    <h3 class="ed-sub" data-i18n="grpTexto">Texto</h3>
+
+    <div class="ed-group">
+      <span class="label" data-i18n="idioma">Idioma</span>
+      <div class="seg" role="group" aria-label="Idioma">
+        <button type="button" data-set-lang="pt" aria-pressed="true">Português</button>
+        <button type="button" data-set-lang="en" aria-pressed="false">English</button>
+      </div>
+    </div>
+
+    <div class="ed-group">
+      <span class="label" data-i18n="tipografia">Tipografia</span>
+      <div class="seg seg--glyph" role="group" aria-label="Tipografia">
+        <button type="button" data-set-font="misto" aria-pressed="true">
+          <span class="glyph glyph--type"><b style="font-family:var(--font-mono)">A</b><i style="font-family:system-ui,sans-serif;font-style:normal">a</i></span>
+          <span data-i18n="fontMisto">Misto</span>
+        </button>
+        <button type="button" data-set-font="sans" aria-pressed="false">
+          <span class="glyph glyph--type" style="font-family:system-ui,sans-serif">Aa</span>
+          <span data-i18n="fontSans">Sans</span>
+        </button>
+        <button type="button" data-set-font="mono" aria-pressed="false">
+          <span class="glyph glyph--type" style="font-family:var(--font-mono)">Aa</span>
+          <span data-i18n="fontMono">Mono</span>
+        </button>
+        <button type="button" data-set-font="serifa" aria-pressed="false">
+          <span class="glyph glyph--type" style="font-family:Georgia,serif">Aa</span>
+          <span data-i18n="fontSerifa">Serifa</span>
+        </button>
+      </div>
+    </div>
+
+    <div class="ed-group">
+      <span class="label" data-i18n="tamanho">Tamanho</span>
+      <div class="fs-row">
+        <input class="slider" type="range" id="fs-range" min="85" max="130" step="5" value="100"
+               aria-label="Tamanho do texto em porcentagem">
+        <span class="fs-val" id="fs-val">100%</span>
+      </div>
+    </div>
+
+    <h3 class="ed-sub" data-i18n="grpAparencia">Aparência</h3>
+
+    <div class="ed-group">
+      <span class="label" data-i18n="tema">Tema</span>
+      <div class="seg seg--glyph" role="group" aria-label="Tema">
+        <button type="button" data-set-theme="dark" aria-pressed="false">
+          <svg class="glyph" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"></path></svg>
+          <span data-i18n="tEscuro">Escuro</span>
+        </button>
+        <button type="button" data-set-theme="light" aria-pressed="false">
+          <svg class="glyph" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M19.1 4.9l-1.4 1.4M6.3 17.7l-1.4 1.4"></path></svg>
+          <span data-i18n="tClaro">Claro</span>
+        </button>
+      </div>
+    </div>
+
+    <div class="ed-group">
+      <span class="label" data-i18n="destaque">Cor de destaque</span>
+      <div class="ed-row">
+        <button class="swatch" type="button" data-set-accent="ambar"   style="--sw:255 167 36"  aria-label="Âmbar"   aria-pressed="true"></button>
+        <button class="swatch" type="button" data-set-accent="ciano"   style="--sw:79 205 224"  aria-label="Ciano"   aria-pressed="false"></button>
+        <button class="swatch" type="button" data-set-accent="violeta" style="--sw:167 139 250" aria-label="Violeta" aria-pressed="false"></button>
+        <button class="swatch" type="button" data-set-accent="verde"   style="--sw:63 179 147"  aria-label="Verde"   aria-pressed="false"></button>
+        <label class="pickwrap" title="Escolher uma cor livre">
+          <svg class="brush" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M9.5 14.5 4 20l3.5.5.5 3.5 5.5-5.5"></path>
+            <path d="M14 16c3.5-1 7-4.5 7-9V3h-4c-4.5 0-8 3.5-9 7l6 6Z"></path>
+          </svg>
+          <input class="colorpick" type="color" id="accent-custom" value="#ffa724" aria-label="Escolher cor de destaque livre">
+        </label>
+      </div>
+    </div>
+
+    <div class="ed-group">
+      <div class="ed-row ed-row--split">
+        <span class="label" id="motion-label" data-i18n="animacao">Animação</span>
+        <button class="switch" type="button" id="motion-toggle" role="switch" aria-checked="true" aria-labelledby="motion-label"></button>
+      </div>
+      <div class="seg seg--glyph" role="group" aria-label="Sentido da animação" id="anim-dir-group">
+        <button type="button" data-set-anim="subir" aria-pressed="true">
+          <svg class="glyph" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V6"></path><path d="M6 12l6-6 6 6"></path></svg>
+          <span data-i18n="aSobe">Sobe</span>
+        </button>
+        <button type="button" data-set-anim="descer" aria-pressed="false">
+          <svg class="glyph" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v13"></path><path d="M6 12l6 6 6-6"></path></svg>
+          <span data-i18n="aDesce">Desce</span>
+        </button>
+        <button type="button" data-set-anim="surgir" aria-pressed="false">
+          <svg class="glyph" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="7" stroke-dasharray="3 3"></circle><circle cx="12" cy="12" r="3" fill="currentColor" stroke="none" opacity=".55"></circle></svg>
+          <span data-i18n="aSurge">Surge</span>
+        </button>
+        <button type="button" data-set-anim="crescer" aria-pressed="false">
+          <svg class="glyph" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><rect x="9" y="9" width="6" height="6"></rect><path d="M5 8V5h3M19 8V5h-3M5 16v3h3M19 16v3h-3"></path></svg>
+          <span data-i18n="aCresce">Cresce</span>
+        </button>
+      </div>
+    </div>
+
+    <h3 class="ed-sub" data-i18n="grpBordas">Bordas</h3>
+
+    <div class="ed-group">
+      <span class="label" data-i18n="cantos">Cantos</span>
+      <div class="seg seg--glyph" role="group" aria-label="Cantos">
+        <button type="button" data-set-cantos="reto" aria-pressed="false">
+          <svg class="glyph" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="5" y="5" width="14" height="14"></rect></svg>
+          <span data-i18n="cRetos">Retos</span>
+        </button>
+        <button type="button" data-set-cantos="padrao" aria-pressed="true">
+          <svg class="glyph" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="5" y="5" width="14" height="14" rx="3"></rect></svg>
+          <span data-i18n="cPadrao">Padrão</span>
+        </button>
+        <button type="button" data-set-cantos="redondo" aria-pressed="false">
+          <svg class="glyph" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="5" y="5" width="14" height="14" rx="7"></rect></svg>
+          <span data-i18n="cRedondos">Redondos</span>
+        </button>
+      </div>
+    </div>
+
+    <div class="ed-group">
+      <span class="label" data-i18n="grossura">Grossura</span>
+      <div class="seg seg--glyph" role="group" aria-label="Grossura da borda">
+        <button type="button" data-set-bw="1" aria-pressed="true">
+          <svg class="glyph" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" aria-hidden="true"><rect x="4.5" y="6.5" width="15" height="11" rx="2"></rect></svg>
+          1px
+        </button>
+        <button type="button" data-set-bw="2" aria-pressed="false">
+          <svg class="glyph" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="4.5" y="6.5" width="15" height="11" rx="2"></rect></svg>
+          2px
+        </button>
+        <button type="button" data-set-bw="3" aria-pressed="false">
+          <svg class="glyph" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><rect x="4.5" y="6.5" width="15" height="11" rx="2"></rect></svg>
+          3px
+        </button>
+        <button type="button" data-set-bw="4" aria-pressed="false">
+          <svg class="glyph" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="4" aria-hidden="true"><rect x="4.5" y="6.5" width="15" height="11" rx="2"></rect></svg>
+          4px
+        </button>
+      </div>
+    </div>
+
+    <h3 class="ed-sub" data-i18n="grpLayout">Layout</h3>
+
+    <div class="ed-group">
+      <span class="label" data-i18n="fundo">Fundo</span>
+      <div class="seg seg--glyph" role="group" aria-label="Fundo">
+        <button type="button" data-set-fundo="solida" aria-pressed="true">
+          <svg class="glyph" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="4" y="6" width="16" height="12" rx="1"></rect></svg>
+          <span data-i18n="fSolido">Sólido</span>
+        </button>
+        <button type="button" data-set-fundo="animada" aria-pressed="false">
+          <svg class="glyph" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><rect x="4" y="6" width="16" height="12" rx="1"></rect><path d="M8 15l4-5 4 3"></path><circle cx="8" cy="15" r="1.4" fill="currentColor" stroke="none"></circle><circle cx="12" cy="10" r="1.4" fill="currentColor" stroke="none"></circle><circle cx="16" cy="13" r="1.4" fill="currentColor" stroke="none"></circle></svg>
+          <span data-i18n="fAnimado">Animado</span>
+        </button>
+        <button type="button" data-set-fundo="imagem" aria-pressed="false">
+          <svg class="glyph" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="4" y="6" width="16" height="12" rx="1"></rect><g fill="currentColor" stroke="none"><circle cx="8" cy="10" r="1"></circle><circle cx="12" cy="10" r="1"></circle><circle cx="16" cy="10" r="1"></circle><circle cx="8" cy="14" r="1"></circle><circle cx="12" cy="14" r="1"></circle><circle cx="16" cy="14" r="1"></circle></g></svg>
+          <span data-i18n="fPontos">Pontos</span>
+        </button>
+      </div>
+
+      <div class="ed-subopt">
+        <span class="label label--sub" data-i18n="movEstilo">Estilo do movimento</span>
+        <div class="seg seg--glyph" role="group" aria-label="Estilo do fundo animado">
+          <button type="button" data-set-bgvar="rede" aria-pressed="true">
+            <svg class="glyph" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M6 17l5-8 6 4"></path><path d="M11 9l7-3"></path><g fill="currentColor" stroke="none"><circle cx="6" cy="17" r="1.7"></circle><circle cx="11" cy="9" r="1.7"></circle><circle cx="17" cy="13" r="1.7"></circle><circle cx="18" cy="6" r="1.4"></circle></g></svg>
+            Rede
+          </button>
+          <button type="button" data-set-bgvar="matrix" aria-pressed="false">
+            <svg class="glyph" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><path d="M5 3v7" opacity=".35"></path><path d="M5 12v5"></path><path d="M12 3v4" opacity=".35"></path><path d="M12 9v9"></path><path d="M19 3v9" opacity=".35"></path><path d="M19 14v6"></path></svg>
+            Matrix
+          </button>
+          <button type="button" data-set-bgvar="fluxo" aria-pressed="false">
+            <svg class="glyph" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M2 8h20M2 16h20" opacity=".4"></path><g fill="currentColor" stroke="none"><rect x="6" y="6.4" width="5" height="3.2" rx="1"></rect><rect x="14" y="14.4" width="5" height="3.2" rx="1"></rect></g></svg>
+            Fluxo
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="ed-group">
+      <span class="label" data-i18n="menu">Menu</span>
+      <div class="seg seg--glyph" role="group" aria-label="Layout do menu">
+        <button type="button" data-set-nav="topo" aria-pressed="true">
+          <svg class="glyph" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><rect x="4" y="5" width="16" height="14" rx="1"></rect><path d="M4 9h16" stroke-width="2.4"></path></svg>
+          <span data-i18n="nTopo">Topo</span>
+        </button>
+        <button type="button" data-set-nav="lateral" aria-pressed="false">
+          <svg class="glyph" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><rect x="4" y="5" width="16" height="14" rx="1"></rect><path d="M9 5v14" stroke-width="2.4"></path></svg>
+          <span data-i18n="nLateral">Lateral</span>
+        </button>
+      </div>
+      <div class="ed-row ed-row--split">
+        <span class="label" id="navicons-label" data-i18n="menuIcones">Ícones nos itens</span>
+        <button class="switch" type="button" id="navicons-toggle" role="switch" aria-checked="false" aria-labelledby="navicons-label"></button>
+      </div>
+    </div>
+
+    <div class="ed-group">
+      <span class="label" data-i18n="contato">Contato</span>
+      <div class="seg seg--glyph" role="group" aria-label="Estilo do contato">
+        <button type="button" data-set-contato="bloco" aria-pressed="true">
+          <svg class="glyph" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><rect x="4" y="5" width="16" height="14" rx="1"></rect><rect x="7" y="11" width="10" height="5" rx="1" fill="currentColor" stroke="none" opacity=".55"></rect></svg>
+          <span data-i18n="coBloco">Bloco</span>
+        </button>
+        <button type="button" data-set-contato="faixa" aria-pressed="false">
+          <svg class="glyph" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><rect x="4" y="5" width="16" height="14" rx="1"></rect><rect x="4" y="11" width="16" height="5" fill="currentColor" stroke="none" opacity=".55"></rect></svg>
+          <span data-i18n="coFaixa">Faixa cheia</span>
+        </button>
+        <button type="button" data-set-contato="flutuante" aria-pressed="false">
+          <svg class="glyph" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><rect x="4" y="5" width="16" height="14" rx="1"></rect><circle cx="16" cy="15" r="2.6" fill="currentColor" stroke="none"></circle></svg>
+          <span data-i18n="coFlutuante">Flutuante</span>
+        </button>
+      </div>
+    </div>
+
+    <div class="ed-group">
+      <span class="label" data-i18n="ordem">Ordem das seções</span>
+      <span class="ed-hint" data-i18n="ordemDica">Arraste para reordenar. O menu acompanha.</span>
+      <ul class="orderlist" id="orderlist"></ul>
+    </div>
+
+  </div>
+
+  <div class="editor__foot">
+    <button class="ed-btn" type="button" id="editor-reset" data-i18n="restaurar">Restaurar tudo ao padrão</button>
+  </div>
+
+ </div><!-- /.editor__inner -->
+</div>
+
+<script src="main.js?v=17" defer></script>
+</body>
+</html>
